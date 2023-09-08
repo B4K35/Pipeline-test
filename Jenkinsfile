@@ -72,14 +72,14 @@ pipeline {
                 success 
                 {
                     mail to: 's222292111@deakin.edu.au',
-                    subject: 'Success - Unit and Integration Tests',
+                    subject: 'Success - Code Analysis',
                     body: "Code Analysis successfully completed."
                     
                 }
                 failure 
                 {
                     mail to: 's222292111@deakin.edu.au',
-                    subject: 'Failed - Unit and Integration Tests',
+                    subject: 'Failed - Code Analysis',
                     body: "Code Analysis failed."
                 }
             }
@@ -122,14 +122,14 @@ pipeline {
                 success 
                 {
                     mail to: 's222292111@deakin.edu.au',
-                    subject: 'Success - Unit and Integration Tests',
+                    subject: 'Success - Deploy to Staging',
                     body: "Deploy to Staging successfully completed."
                     
                 }
                 failure 
                 {
                     mail to: 's222292111@deakin.edu.au',
-                    subject: 'Failed - Unit and Integration Tests',
+                    subject: 'Failed - Deploy to Staging',
                     body: "Deploy to Staging failed."
                 }
             }
