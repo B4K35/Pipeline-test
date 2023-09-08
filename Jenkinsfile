@@ -15,21 +15,21 @@ pipeline {
             {
                 // - Build the code using a build automation tool to compile and package your code. 
                 echo 'Building the code using Maven'
-                post 
+            }
+            post 
+            {
+                success 
                 {
-                    success 
-                    {
-                        mail to: 's222292111@deakin.edu.au',
-                        subject: 'Success - Build Status',
-                        body: "Build has successfully been completed."
-                        
-                    }
-                    failure 
-                    {
-                        mail to: 's222292111@deakin.edu.au',
-                        subject: 'Failed - Build Status',
-                        body: "Build failed."
-                    }
+                    mail to: 's222292111@deakin.edu.au',
+                    subject: 'Success - Build Status',
+                    body: "Build has successfully been completed."
+                    
+                }
+                failure 
+                {
+                    mail to: 's222292111@deakin.edu.au',
+                    subject: 'Failed - Build Status',
+                    body: "Build failed."
                 }
             }
         }
@@ -40,21 +40,21 @@ pipeline {
             {
                 // - Run unit tests to ensure the code functions as expected and run integration tests to ensure the different components of the application work together as expected.
                 echo 'Running the unit and integration tests using Selenium and JUnit'
-                post 
+            }
+            post 
+            {
+                success 
                 {
-                    success 
-                    {
-                        mail to: 's222292111@deakin.edu.au',
-                        subject: 'Success - Unit and Integration Tests',
-                        body: "Unit and Integration Tests have successfully been completed."
-                        
-                    }
-                    failure 
-                    {
-                        mail to: 's222292111@deakin.edu.au',
-                        subject: 'Failed - Unit and Integration Tests',
-                        body: "Unit and Integration Tests failed."
-                    }
+                    mail to: 's222292111@deakin.edu.au',
+                    subject: 'Success - Unit and Integration Tests',
+                    body: "Unit and Integration Tests have successfully been completed."
+                    
+                }
+                failure 
+                {
+                    mail to: 's222292111@deakin.edu.au',
+                    subject: 'Failed - Unit and Integration Tests',
+                    body: "Unit and Integration Tests failed."
                 }
             }
         }
@@ -66,21 +66,21 @@ pipeline {
             {
                 // - Integrate a code analysis tool to analyse the code and ensure it meets industry standards.
                 echo 'Analyzing the code using Jenkins and SonarQube'
-                post 
+            }
+            post 
+            {
+                success 
                 {
-                    success 
-                    {
-                        mail to: 's222292111@deakin.edu.au',
-                        subject: 'Success - Unit and Integration Tests',
-                        body: "Code Analysis successfully completed."
-                        
-                    }
-                    failure 
-                    {
-                        mail to: 's222292111@deakin.edu.au',
-                        subject: 'Failed - Unit and Integration Tests',
-                        body: "Code Analysis failed."
-                    }
+                    mail to: 's222292111@deakin.edu.au',
+                    subject: 'Success - Unit and Integration Tests',
+                    body: "Code Analysis successfully completed."
+                    
+                }
+                failure 
+                {
+                    mail to: 's222292111@deakin.edu.au',
+                    subject: 'Failed - Unit and Integration Tests',
+                    body: "Code Analysis failed."
                 }
             }
         }
@@ -91,21 +91,21 @@ pipeline {
             {
                 // - Perform a security scan of the code using a tool to identify any vulnerabilities.
                 echo 'Performing a security scan on the code using OWASP ZAP'
-                post 
+            }
+            post 
+            {
+                success 
                 {
-                    success 
-                    {
-                        mail to: 's222292111@deakin.edu.au',
-                        subject: 'Success - Security Scan',
-                        body: "Security Scan successfully completed."
-                        
-                    }
-                    failure 
-                    {
-                        mail to: 's222292111@deakin.edu.au',
-                        subject: 'Failed - Security Scan',
-                        body: "Security Scan failed."
-                    }
+                    mail to: 's222292111@deakin.edu.au',
+                    subject: 'Success - Security Scan',
+                    body: "Security Scan successfully completed."
+                    
+                }
+                failure 
+                {
+                    mail to: 's222292111@deakin.edu.au',
+                    subject: 'Failed - Security Scan',
+                    body: "Security Scan failed."
                 }
             }
         }
@@ -114,22 +114,23 @@ pipeline {
         {
             steps
             {
+                // - Deploy the application to a staging server (e.g., AWS EC2 instance).
                 echo 'Deploying the application to an AWS EC2 instance'
-                post 
+            }
+            post 
+            {
+                success 
                 {
-                    success 
-                    {
-                        mail to: 's222292111@deakin.edu.au',
-                        subject: 'Success - Unit and Integration Tests',
-                        body: "Deploy to Staging successfully completed."
-                        
-                    }
-                    failure 
-                    {
-                        mail to: 's222292111@deakin.edu.au',
-                        subject: 'Failed - Unit and Integration Tests',
-                        body: "Deploy to Staging failed."
-                    }
+                    mail to: 's222292111@deakin.edu.au',
+                    subject: 'Success - Unit and Integration Tests',
+                    body: "Deploy to Staging successfully completed."
+                    
+                }
+                failure 
+                {
+                    mail to: 's222292111@deakin.edu.au',
+                    subject: 'Failed - Unit and Integration Tests',
+                    body: "Deploy to Staging failed."
                 }
             }
         }
@@ -138,22 +139,23 @@ pipeline {
         {
             steps
             {
+                // - Run integration tests on the staging environment to ensure the application functions as expected in a production-like environment.
                 echo 'Running integration tests on the staging environment using Selenium'
-                post 
+            }
+            post 
+            {
+                success 
                 {
-                    success 
-                    {
-                        mail to: 's222292111@deakin.edu.au',
-                        subject: 'Success - Integration Tests on Staging',
-                        body: "Integration Tests on Staging has successfully been completed."
-                        
-                    }
-                    failure 
-                    {
-                        mail to: 's222292111@deakin.edu.au',
-                        subject: 'Failed - Integration Tests on Staging',
-                        body: "Integration Tests on Staging failed."
-                    }
+                    mail to: 's222292111@deakin.edu.au',
+                    subject: 'Success - Integration Tests on Staging',
+                    body: "Integration Tests on Staging has successfully been completed."
+                    
+                }
+                failure 
+                {
+                    mail to: 's222292111@deakin.edu.au',
+                    subject: 'Failed - Integration Tests on Staging',
+                    body: "Integration Tests on Staging failed."
                 }           
             }
         }
@@ -162,22 +164,23 @@ pipeline {
         {
             steps
             {
+                // - Deploy the application to a production server (e.g., AWS EC2 instance).
                 echo 'Deploying the application to an AWS EC2 instance'
-                post 
+            }
+            post 
+            {
+                success 
                 {
-                    success 
-                    {
-                        mail to: 's222292111@deakin.edu.au',
-                        subject: 'Success - Deploy to Production',
-                        body: "Deploy to Production was successfully been completed."
-                        
-                    }
-                    failure 
-                    {
-                        mail to: 's222292111@deakin.edu.au',
-                        subject: 'Failed - Deploy to Production',
-                        body: "Deploy to Production failed."
-                    }
+                    mail to: 's222292111@deakin.edu.au',
+                    subject: 'Success - Deploy to Production',
+                    body: "Deploy to Production was successfully been completed."
+                    
+                }
+                failure 
+                {
+                    mail to: 's222292111@deakin.edu.au',
+                    subject: 'Failed - Deploy to Production',
+                    body: "Deploy to Production failed."
                 }
             }
         }
