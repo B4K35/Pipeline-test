@@ -1,2 +1,2 @@
 # Pipeline-test
-Jenkins pipeline test for SIT223
+Jenkins pipeline test for SIT223.
