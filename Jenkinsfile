@@ -21,7 +21,7 @@ pipeline {
                 success 
                 {
                     mail to: 's222292111@deakin.edu.au',
-                    attachLog: true
+                    attachLog: true,
                     subject: 'Success - Build Status',
                     body: "Build has successfully been completed." 
                     
@@ -30,7 +30,7 @@ pipeline {
                 failure 
                 {
                     mail to: 's222292111@deakin.edu.au',
-                    attachLog: true
+                    attachLog: true,
                     subject: 'Failed - Build Status',
                     body: "Build failed."
                 }
