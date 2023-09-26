@@ -22,14 +22,16 @@ pipeline {
                 {
                     mail to: 's222292111@deakin.edu.au',
                     subject: 'Success - Build Status',
-                    body: "Build has successfully been completed." + ${BUILD_LOG, maxLines, escapeHtml}
+                    body: "Build has successfully been completed." 
+                    attachLog: True
                     
                 }
                 failure 
                 {
                     mail to: 's222292111@deakin.edu.au',
                     subject: 'Failed - Build Status',
-                    body: "Build failed." + ${BUILD_LOG, maxLines, escapeHtml}
+                    body: "Build failed."
+                    attachLog: True
                 }
             }
         }
@@ -47,14 +49,16 @@ pipeline {
                 {
                     mail to: 's222292111@deakin.edu.au',
                     subject: 'Success - Unit and Integration Tests',
-                    body: "Unit and Integration Tests have successfully been completed." + ${BUILD_LOG, maxLines, escapeHtml}
+                    body: "Unit and Integration Tests have successfully been completed." 
+                    attachLog: True
                     
                 }
                 failure 
                 {
                     mail to: 's222292111@deakin.edu.au',
                     subject: 'Failed - Unit and Integration Tests',
-                    body: "Unit and Integration Tests failed." + ${BUILD_LOG, maxLines, escapeHtml}
+                    body: "Unit and Integration Tests failed." 
+                    attachLog: True
                 }
             }
         }
@@ -73,13 +77,15 @@ pipeline {
                 {
                     mail to: 's222292111@deakin.edu.au',
                     subject: 'Success - Code Analysis',
-                    body: "Code Analysis successfully completed." + ${BUILD_LOG, maxLines, escapeHtml}                    
+                    body: "Code Analysis successfully completed." 
+                    attachLog: True
                 }
                 failure 
                 {
                     mail to: 's222292111@deakin.edu.au',
                     subject: 'Failed - Code Analysis',
-                    body: "Code Analysis failed." + ${BUILD_LOG, maxLines, escapeHtml}
+                    body: "Code Analysis failed." 
+                    attachLog: True
                 }
             }
         }
@@ -97,13 +103,15 @@ pipeline {
                 {
                     mail to: 's222292111@deakin.edu.au',
                     subject: 'Success - Security Scan',
-                    body: "Security Scan successfully completed." + ${BUILD_LOG, maxLines, escapeHtml}
+                    body: "Security Scan successfully completed."
+                    attachLog: True
                 }
                 failure 
                 {
                     mail to: 's222292111@deakin.edu.au',
                     subject: 'Failed - Security Scan',
-                    body: "Security Scan failed." + ${BUILD_LOG, maxLines, escapeHtml}
+                    body: "Security Scan failed." 
+                    attachLog: True
                 }
             }
         }
@@ -121,13 +129,16 @@ pipeline {
                 {
                     mail to: 's222292111@deakin.edu.au',
                     subject: 'Success - Deploy to Staging',
-                    body: "Deploy to Staging successfully completed." + ${BUILD_LOG, maxLines, escapeHtml}                    
+                    body: "Deploy to Staging successfully completed." 
+                    attachLog: True
+
                 }
                 failure 
                 {
                     mail to: 's222292111@deakin.edu.au',
                     subject: 'Failed - Deploy to Staging',
-                    body: "Deploy to Staging failed." + ${BUILD_LOG, maxLines, escapeHtml}
+                    body: "Deploy to Staging failed." 
+                    attachLog: True
                 }
             }
         }
@@ -145,13 +156,15 @@ pipeline {
                 {
                     mail to: 's222292111@deakin.edu.au',
                     subject: 'Success - Integration Tests on Staging',
-                    body: "Integration Tests on Staging has successfully been completed." + ${BUILD_LOG, maxLines, escapeHtml}                 
+                    body: "Integration Tests on Staging has successfully been completed." 
+                    attachLog: True
                 } 
                 failure 
                 {
                     mail to: 's222292111@deakin.edu.au',
                     subject: 'Failed - Integration Tests on Staging',
-                    body: "Integration Tests on Staging failed." + ${BUILD_LOG, maxLines, escapeHtml}
+                    body: "Integration Tests on Staging failed." 
+                    attachLog: True
                 }           
             }
         }
@@ -169,13 +182,16 @@ pipeline {
                 {
                     mail to: 's222292111@deakin.edu.au',
                     subject: 'Success - Deploy to Production',
-                    body: "Deploy to Production was successfully been completed." + ${BUILD_LOG, maxLines, escapeHtml}                    
+                    body: "Deploy to Production was successfully been completed." 
+                    attachLog: True
                 }
                 failure 
                 {
                     mail to: 's222292111@deakin.edu.au',
                     subject: 'Failed - Deploy to Production',
-                    body: "Deploy to Production failed." + ${BUILD_LOG, maxLines, escapeHtml}                }
+                    body: "Deploy to Production failed."
+                    attachLog: True
+                }
             }
         }
     }
