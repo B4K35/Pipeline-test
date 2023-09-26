@@ -20,7 +20,7 @@ pipeline {
             {
                 success 
                 {
-                    emailext to: 's222292111@deakin.edu.au',
+                    to: 's222292111@deakin.edu.au',
                     attachLog: true,
                     subject: 'Success - Build Status',
                     body: "Build has successfully been completed." 
@@ -29,7 +29,7 @@ pipeline {
                 }
                 failure 
                 {
-                    emailext to: 's222292111@deakin.edu.au',
+                    to: 's222292111@deakin.edu.au',
                     attachLog: true,
                     subject: 'Failed - Build Status',
                     body: "Build failed."
@@ -48,14 +48,14 @@ pipeline {
             {
                 success 
                 {
-                    emailext to: 's222292111@deakin.edu.au',
+                    to: 's222292111@deakin.edu.au',
                     attachLog: true,
                     subject: 'Success - Unit and Integration Tests',
                     body: "Unit and Integration Tests have successfully been completed."                     
                 }
                 failure 
                 {
-                    emailext to: 's222292111@deakin.edu.au',
+                    to: 's222292111@deakin.edu.au',
                     attachLog: true,
                     subject: 'Failed - Unit and Integration Tests',
                     body: "Unit and Integration Tests failed." 
